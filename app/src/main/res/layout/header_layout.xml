@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/header_constraint"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/big_poster"
+        android:scaleType="centerCrop"
+        android:background="@color/fontDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/img_poster"
+        android:layout_width="110dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="155dp"
+        android:contentDescription="@string/poster_desc"
+        android:elevation="@dimen/dp_sm"
+        android:padding="@dimen/dp_m"
+        android:background="@color/fontLight"
+        android:scaleType="centerCrop"
+        android:src="@drawable/nopic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_back" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_m"
+        android:layout_marginTop="@dimen/dp_l"
+        android:textSize="@dimen/font_xl"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/img_poster"
+        app:layout_constraintTop_toBottomOf="@+id/img_back" />
+
+    <TextView
+        android:id="@+id/tv_runtime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_m"
+        android:textSize="@dimen/font_m"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@+id/img_poster"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+</android.support.constraint.ConstraintLayout>
